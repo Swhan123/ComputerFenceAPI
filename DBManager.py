@@ -17,7 +17,7 @@ def login(id, password):
     id_list = []
     ps_list = []
     code_list = []
-    ps_lock = hashlib.sha256(password.encode()).hexdigest()
+    ps_lock = hashlib.md5(password.encode()).hexdigest()
 
     for row in user_list:
         id_list.append(row[0])
